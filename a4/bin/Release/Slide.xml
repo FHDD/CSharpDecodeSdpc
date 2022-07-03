@@ -1,0 +1,1379 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Slide</name>
+    </assembly>
+    <members>
+        <member name="M:Slide.Cache.HardDiskCache.#ctor(System.String,System.Int64)">
+            <summary>
+            创建一个硬盘缓存目录
+            </summary>
+            <param name="文件名称"></param>
+            <param name="文件大小"></param>
+        </member>
+        <member name="T:Slide.Cache.ICache`2">
+            <summary>
+            缓存接口
+            </summary>
+            <typeparam name="TKey">键</typeparam>
+            <typeparam name="TValue">值</typeparam>
+        </member>
+        <member name="M:Slide.Cache.ICache`2.AddCache(`0,`1)">
+            <summary>
+            新增缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Slide.Cache.ICache`2.GetCache(`0)">
+            <summary>
+            通过键来获取缓存
+            </summary>
+            <param name="key">键</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Slide.Cache.ICache`2.RemoveCache(`0)">
+            <summary>
+            通过键来移除缓存
+            </summary>
+            <param name="key">键</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Slide.Cache.ICache`2.ContainCache(`0)">
+            <summary>
+            是否存在该键
+            </summary>
+            <param name="key">键</param>
+            <returns>值</returns>
+        </member>
+        <member name="P:Slide.Cache.ICache`2.Count">
+            <summary>
+            缓存数量
+            </summary>
+        </member>
+        <member name="T:Slide.Common.SlideImage">
+            <summary>
+            切片基类
+            </summary>
+        </member>
+        <member name="M:Slide.Common.SlideImage.OpenImage">
+            <summary>
+            打开图像接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Slide.Common.SlideImage.GetSliceArgb(System.Int32,System.Drawing.Point)">
+            <summary>
+            获取切片四通道原始数据（单位：瓦片）
+            </summary>
+            <param name="level">层级</param>
+            <param name="p">指定的瓦片</param>
+            <returns>成功返回流，失败返回null</returns>
+        </member>
+        <member name="M:Slide.Common.SlideImage.GetRegionArgb(System.Int32,System.Drawing.Rectangle)">
+            <summary>
+            获取切片区域四通道原始数据（单位：像数）
+            </summary>
+            <param name="level">层级</param>
+            <param name="region">区域位置和大小</param>
+            <returns>成功返回流，失败返回null</returns>
+        </member>
+        <member name="M:Slide.Common.SlideImage.GetBestLevelForDownsample(System.Double)">
+            <summary>
+            通过缩放因子获取最优层级
+            </summary>
+            <param name="downsample">缩放因子</param>
+            <returns>最优的层级</returns>
+        </member>
+        <member name="M:Slide.Common.SlideImage.CloseImage">
+            <summary>
+            关闭图像
+            </summary>
+        </member>
+        <member name="T:Slide.Common.IStream">
+            <summary>
+            流式接口
+            </summary>
+        </member>
+        <member name="P:Slide.Common.IStream.ObjectName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:Slide.Common.IStream.ObjectLength">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Slide.Common.IStream.DoesObjectExist">
+            <summary>
+            文件是否存在
+            </summary>
+        </member>
+        <member name="M:Slide.Common.IStream.GetStreamData(System.Int64,System.Int32)">
+            <summary>
+            获取数据流
+            </summary>
+            <param name="offset">偏移量</param>
+            <param name="count">大小</param>
+            <returns>成功返回数据流，失败返回null</returns>
+        </member>
+        <member name="T:Slide.Common.SlideInfo">
+            <summary>
+            切片信息
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.ObjectName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.Suffixes">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.ImageSize">
+            <summary>
+            图像大小（包括补边）
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.ImageSizeWithoutEdge">
+            <summary>
+            图像大小（不包括补边）
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.TileSize">
+            <summary>
+            瓦片大小
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.TileCount">
+            <summary>
+            层级瓦片的数量
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.Downsample">
+            <summary>
+            缩放因子
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.LeftTopEdge">
+            <summary>
+            左上侧边沿空白区域
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.RightButtomEdge">
+            <summary>
+            右下侧边沿空白区域
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.LevelCount">
+            <summary>
+            层级数量
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.Rate">
+            <summary>
+            扫描倍率
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.MppX">
+            <summary>
+            分辨率
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.MppY">
+            <summary>
+            分辨率
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.XBounds">
+            <summary>
+            空白区域位置
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.YBounds">
+            <summary>
+            空白区域位置
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.WidthBounds">
+            <summary>
+            空白区域大小
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.HeightBounds">
+            <summary>
+            空白区域大小
+            </summary>
+        </member>
+        <member name="F:Slide.Common.SlideInfo.Channel">
+            <summary>
+            切片原始数据通道数（argb）
+            </summary>
+        </member>
+        <member name="F:Slide.Common.SlideInfo.Format">
+            <summary>
+            像素格式，默认PixelFormat.Format32bppPArgb
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.Thumbnail">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.Macrograph">
+            <summary>
+            宏观图
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.Preview">
+            <summary>
+            预览图
+            </summary>
+        </member>
+        <member name="P:Slide.Common.SlideInfo.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="M:Slide.Common.SlideInfo.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Slide.Decode.DecodeImage">
+            <summary>
+            解码接口
+            </summary>
+        </member>
+        <member name="T:Slide.Decode.DecodeImage.DecodeSliceDelegate">
+            <summary>
+            解码委托
+            </summary>
+            <param name="src">输入图像流数据</param>
+            <param name="size">图像大小</param>
+            <param name="bgra">输出原始数据</param>
+            <returns>成功返回原始数据大小，失败返回-1</returns>
+        </member>
+        <member name="M:Slide.Decode.DecodeImage.DecodeJpegSlice(System.Byte[],System.Drawing.Size,System.Byte[])">
+            <summary>
+            解码jpeg
+            </summary>
+            <param name="src">输入图像流数据</param>
+            <param name="size">图像大小</param>
+            <param name="bgra">输出原始数据</param>
+            <returns>成功返回原始数据大小，失败返回-1</returns>
+        </member>
+        <member name="M:Slide.Decode.DecodeImage.DecodeHevcSlice(System.Byte[],System.Drawing.Size,System.Byte[])">
+            <summary>
+            解码hevc
+            </summary>
+            <param name="src">输入图像流数据</param>
+            <param name="size">图像大小</param>
+            <param name="bgra">输出原始数据</param>
+            <returns>成功返回原始数据大小，失败返回-1</returns>
+        </member>
+        <member name="T:Slide.DLL.Hevc">
+            <summary>
+            hevc调用C++接口
+            </summary>
+        </member>
+        <member name="M:Slide.DLL.Hevc.DecodeHevc(System.Byte[],System.Int32,System.Int32,System.Int32,System.Byte[])">
+            <summary>
+            解码hevc
+            </summary>
+            <param name="hevcStream">hevc图像流数据</param>
+            <param name="width">图像宽度</param>
+            <param name="height">图像高度</param>
+            <param name="hevcSize">流数据长度</param>d
+            <param name="rgba">输出原始数据</param>
+            <returns>成功返回原始数据大小，失败返回-1</returns>
+        </member>
+        <member name="T:Slide.DLL.ImportOsr">
+            <summary>
+            调用openslide的C++库
+            </summary>
+        </member>
+        <member name="T:Slide.DLL.TJpg">
+            <summary>
+            编解码jpeg格式
+            </summary>
+        </member>
+        <member name="M:Slide.DLL.TJpg.EncodeJpeg(System.IntPtr,System.IntPtr@,System.Int32,System.Int32,System.Int32,Slide.EnumHelper.J_COLOR_SPACE)">
+            <summary>
+            将原始格式压缩成jpeg
+            </summary>
+            <param name="src"></param>
+            <param name="dst"></param>
+            <param name="quality"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="colrSpace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Slide.DLL.TJpg.DecodeJpeg(System.Byte[],System.Int32,System.Byte[],Slide.EnumHelper.J_COLOR_SPACE)">
+            <summary>
+            解码jpeg格式成原始数据
+            </summary>
+            <param name="src"></param>
+            <param name="srcSize"></param>
+            <param name="buffer"></param>
+            <param name="colrSpace"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Slide.EnumHelper.CompressMode">
+            <summary>
+            压缩模式
+            </summary>
+        </member>
+        <member name="T:Slide.LoadImage">
+            <summary>
+            加载图像类
+            </summary>
+        </member>
+        <member name="M:Slide.LoadImage.LoadObjectImage(System.String,Storage.StorageConfig,Storage.EnumHelper.StreamEnum)">
+            <summary>
+            加载图像
+            </summary>
+            <param name="objectName">图像路径</param>
+            <returns>图像资源类，sdpcImage是生强的类，OpenSlideImage是openslide的类，都是继承于SlideImage类</returns>
+        </member>
+        <member name="M:Slide.LoadImage.DisposeObjectImage(System.Object)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="obj">图像资源类，sdpcImage是生强的类，OpenSlideImage是openslide的类，都是继承于SlideImage类</param>
+        </member>
+        <member name="T:Slide.OpenSlide.OpenSlideImage">
+            <summary>
+            OpenSlide图像类
+            </summary>
+        </member>
+        <member name="F:Slide.OpenSlide.OpenSlideImage.LabelName">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="F:Slide.OpenSlide.OpenSlideImage.MacroName">
+            <summary>
+            宏观图
+            </summary>
+        </member>
+        <member name="F:Slide.OpenSlide.OpenSlideImage.ThumbnailName">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="F:Slide.OpenSlide.OpenSlideImage._tileSize">
+            <summary>
+            瓦片尺寸
+            </summary>
+        </member>
+        <member name="M:Slide.OpenSlide.OpenSlideImage.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="objectName">文件路径</param>
+        </member>
+        <member name="M:Slide.OpenSlide.OpenSlideImage.OpenslideGetAssociatedImage(System.String)">
+            <summary>
+            获取关联的图像
+            </summary>
+            <param name="imageName">获取图像的常量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slide.OpenSlide.OpenSlideImage.OpenImage">
+            <summary>
+            打开图像
+            </summary>
+            <returns>正确返回true，失败返回false</returns>
+        </member>
+        <member name="M:Slide.OpenSlide.OpenSlideImage.GetSliceArgb(System.Int32,System.Drawing.Point)">
+            <summary>
+            获取指定的切片（单位：瓦片）
+            </summary>
+            <param name="level">获取指定层级</param>
+            <param name="p">指定的位置的瓦片</param>
+            <returns>成功返回四通道原始数据，失败返回null</returns>
+        </member>
+        <member name="M:Slide.OpenSlide.OpenSlideImage.GetRegionArgb(System.Int32,System.Drawing.Rectangle)">
+            <summary>
+            获取指定区域的切片（单位：像素）
+            </summary>
+            <param name="level">获取指定层级</param>
+            <param name="region">指定区域，x、y为起始像素位置，width、height为获取的图像尺寸</param>
+            <returns>成功返回四通道原始数据，失败返回null</returns>
+        </member>
+        <member name="M:Slide.OpenSlide.OpenSlideImage.GetBestLevelForDownsample(System.Double)">
+            <summary>
+            通过缩放因子获取最优层级
+            </summary>
+            <param name="downsample">缩放因子</param>
+            <returns>最优的层级</returns>
+        </member>
+        <member name="M:Slide.OpenSlide.OpenSlideImage.CloseImage">
+            <summary>
+            关闭图像
+            </summary>
+        </member>
+        <member name="M:Slide.OpenSlide.OpenSlideImage.Dispose">
+            <summary>
+            关闭图像
+            </summary>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Adjust.ColorAdjust">
+            <summary>
+            简单色彩调节
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Adjust.ColorAdjust.GetColorAdjustParamFromConfig">
+            <summary>
+            从配置文件里面获取颜色调节参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Adjust.ColorAdjust.GetColorAdjustParam">
+            <summary>
+            获取颜色调节参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Adjust.ColorAdjust.GetColorAdjustTable(Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam)">
+            <summary>
+            初始化颜色调节总表
+            </summary>
+            <param name="cap"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam">
+            <summary>
+            颜色调节参数
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.Contrast">
+            <summary>
+            对比度
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.Brightness">
+            <summary>
+            亮度
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.Red">
+            <summary>
+            红色通道
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.Green">
+            <summary>
+            绿色通道
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.Blue">
+            <summary>
+            蓝色通道
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.GammaTable">
+            <summary>
+            gamma映射表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.ContrastBrightnessTable">
+            <summary>
+            对比度亮度映射表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.RgbTable">
+            <summary>
+            三通道颜色映射表
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.GetGammaTable(System.Single)">
+            <summary>
+            获取gamma表
+            </summary>
+            <param name="gamma">gamma值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.GetContrastBrightnessTable(System.Int32,System.Int32)">
+            <summary>
+            获取对比度亮度表
+            </summary>
+            <param name="contrast">对比度</param>
+            <param name="brightness">亮度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.GetRgbTable(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取rgb表
+            </summary>
+            <param name="red">红色通道0-255</param>
+            <param name="green">绿色通道0-255</param>
+            <param name="blue">蓝色通道0-255</param>
+            <returns></returns>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Adjust.ColorAdjustParam.GetRgbTable(System.Int32)">
+            <summary>
+            rgb单通道的一个值
+            </summary>
+            <param name="rgb"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.ColorTable">
+            <summary>
+            颜色表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.ColorTable.AdjustTable">
+            <summary>
+            色彩调节映射表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.ColorTable.CcmTable">
+            <summary>
+            CCM校正映射表（真实）
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.ColorTable.LutTable">
+            <summary>
+            Lut映射表（艳丽），基于真实颜色的基础下映射
+            </summary>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Gorgeous.GorgeousStyle">
+            <summary>
+            艳丽风格
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.ColorControl.Gorgeous.GorgeousStyle._colorTable">
+            <summary>
+            颜色映射表
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Gorgeous.GorgeousStyle.#ctor(Slide.Sdpc.ColorControl.ColorTable)">
+            <summary>
+            艳丽构造
+            </summary>
+            <param name="ct">颜色映射表</param>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Gorgeous.GorgeousStyle.SetArgbColorStyle(System.Byte[],System.Drawing.Size)">
+            <summary>
+            获取艳丽图像（带调节）
+            </summary>
+            <param name="argb">原始数据</param>
+            <param name="size">图像大小</param>
+            <returns>成功返回艳丽图像，失败返回null</returns>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Gorgeous.GorgeousStyle.SetArgbColorStyle(System.Drawing.Bitmap)">
+            <summary>
+            获取艳丽图像（带调节）
+            </summary>
+            <param name="bmp">原始图像</param>
+            <returns>成功返回艳丽图像，失败返回null</returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Gorgeous.Lut">
+            <summary>
+            艳丽模式配置
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Gorgeous.Lut.GetLutTable">
+            <summary>
+            获取艳丽模式数据（通过3d.bin）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Gorgeous.LutColorTable">
+            <summary>
+            艳丽模式通道映射表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Gorgeous.LutColorTable.LutRedTable">
+            <summary>
+            红色通道映射数组
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Gorgeous.LutColorTable.LutGreenTable">
+            <summary>
+            绿色通道映射数组
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Gorgeous.LutColorTable.LutBlueTable">
+            <summary>
+            蓝色通道映射数组
+            </summary>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.IColorStyle">
+            <summary>
+            颜色风格和调节接口
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.IColorStyle.SetArgbColorStyle(System.Byte[],System.Drawing.Size)">
+            <summary>
+            设置颜色风格接口，argb4通道
+            </summary>
+            <param name="argb">原始图像数据</param>
+            <param name="size">原始图像数据大小</param>
+            <returns>调节好的图像数据</returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.LoadColor">
+            <summary>
+            获取颜色风格和色彩调节类
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.LoadColor.LoadColorTable(Slide.Sdpc.ColorControl.Real.CcmParam)">
+            <summary>
+            加载颜色表
+            </summary>
+            <param name="cp">CCM参数</param>
+            <returns>成功返回颜色映射表参数，失败返回null</returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Original.OriginalStyle">
+            <summary>
+            原始图像
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Original.OriginalStyle.#ctor(Slide.Sdpc.ColorControl.ColorTable)">
+            <summary>
+            原始图像构造
+            </summary>
+            <param name="ct">颜色映射表</param>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Original.OriginalStyle.SetArgbColorStyle(System.Byte[],System.Drawing.Size)">
+            <summary>
+            获取原始图像（带调节）
+            </summary>
+            <param name="argb">原始数据</param>
+            <param name="size">图像大小</param>
+            <returns>成功返回原始图像，失败返回null</returns>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Original.OriginalStyle.SetArgbColorStyle(System.Drawing.Bitmap)">
+            <summary>
+            获取艳丽图像（带调节）
+            </summary>
+            <param name="bmp">原始图像</param>
+            <returns>成功返回原始图像，失败返回null</returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Real.CcmCorrect">
+            <summary>
+            真实颜色配置
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Real.CcmCorrect.GetCcmTable(Slide.Sdpc.ColorControl.Real.CcmParam)">
+            <summary>
+            色彩校准映射表
+            </summary>
+            <param name="ccmParam">CCM参数</param>
+            <returns>成功返回CCM映射表，失败返回null</returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Real.CcmParam">
+            <summary>
+            CCM参数
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.ColorControl.Real.CcmParam.Dimension">
+            <summary>
+            矩阵大小
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.ColorControl.Real.CcmParam.Ccm">
+            <summary>
+            默认CCM参数
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.ColorControl.Real.CcmParam.RgbRate">
+            <summary>
+            默认rgb比例系数
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.ColorControl.Real.CcmParam.HsvRate">
+            <summary>
+            默认hsv比例系数
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.ColorControl.Real.CcmParam.CcmGamma">
+            <summary>
+            默认gamma系数
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.ColorControl.Real.CcmParam.Model">
+            <summary>
+            相机参数
+            </summary>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Real.CcmColorTable">
+            <summary>
+            CCM映射表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Real.CcmColorTable.ColorRangeTable">
+            <summary>
+            颜色范围映射表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Real.CcmColorTable.CcmRedTable">
+            <summary>
+            红色通道映射表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Real.CcmColorTable.CcmGreenTable">
+            <summary>
+            绿色通道映射表
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.ColorControl.Real.CcmColorTable.CcmBlueTable">
+            <summary>
+            蓝色通道映射表
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Real.CcmColorTable.GetCcmColor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            获取一个像数的CCM参数
+            </summary>
+            <param name="r">红色通道像数值0-255</param>
+            <param name="g">绿色通道像数值0-255</param>
+            <param name="b">蓝色通道像数值0-255</param>
+            <returns>返回校正后的像数值</returns>
+        </member>
+        <member name="T:Slide.Sdpc.ColorControl.Real.RealStyle">
+            <summary>
+            真实颜色风格
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Real.RealStyle.#ctor(Slide.Sdpc.ColorControl.ColorTable)">
+            <summary>
+            真实图像构造
+            </summary>
+            <param name="ct">颜色映射表</param>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Real.RealStyle.SetArgbColorStyle(System.Byte[],System.Drawing.Size)">
+            <summary>
+            获取真实图像（带调节）
+            </summary>
+            <param name="argb">原始数据</param>
+            <param name="size">图像大小</param>
+            <returns>成功返回真实图像，失败返回null</returns>
+        </member>
+        <member name="M:Slide.Sdpc.ColorControl.Real.RealStyle.SetArgbColorStyle(System.Drawing.Bitmap)">
+            <summary>
+            获取真实图像（带调节）
+            </summary>
+            <param name="bmp">原始图像</param>
+            <returns>成功返回真实图像，失败返回null</returns>
+        </member>
+        <member name="T:Slide.Sdpc.Local.LocalStream">
+            <summary>
+            本地流数据类
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.Local.LocalStream.ObjectName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.Local.LocalStream.#ctor(System.String)">
+            <summary>
+            本地流构造
+            </summary>
+            <param name="objectName">文件名</param>
+        </member>
+        <member name="M:Slide.Sdpc.Local.LocalStream.#ctor(System.String,Storage.StorageConfig,Storage.EnumHelper.StreamEnum)">
+            <summary>
+            本地流构造
+            </summary>
+            <param name="objectName">文件名</param>
+        </member>
+        <member name="M:Slide.Sdpc.Local.LocalStream.GetStreamData(System.Int64,System.Int32)">
+            <summary>
+            获取流数据
+            </summary>
+            <param name="offset">偏移量</param>
+            <param name="count">数据大小</param>
+            <returns>成功返回指定流数据，失败返回null</returns>
+        </member>
+        <member name="P:Slide.Sdpc.Local.LocalStream.ObjectLength">
+            <summary>
+            获取文件大小
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.Local.LocalStream.DoesObjectExist">
+            <summary>
+            判断文件是否存在
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.Local.LocalStream.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Slide.Sdpc.SdpcImage">
+            <summary>
+            生强sdpc图像类
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.#ctor(System.String)">
+            <summary>
+            构造函数（打开本地数据以及openslide支持的格式数据）
+            </summary>
+            <param name="objectName">文件名</param>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.#ctor(System.String,Storage.StorageConfig,Storage.EnumHelper.StreamEnum)">
+            <summary>
+            构造函数，打开对象存储的图像（目前只能读取sdpc的数据，只支持阿里云OSS以及亚马逊S3对象存储服务）
+            </summary>
+            <param name="objectName">文件名</param>
+            <param name="config">桶配置（针对aws、aliyunoss有效）</param>
+            <param name="streamEnum">枚举</param>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcPicHead">
+            <summary>
+            获取sdpc文件头信息
+            </summary>
+            <returns>头信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcPersonInfo">
+            <summary>
+            获取病人信息（暂不使用）
+            </summary>
+            <returns>返回病人信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcMacroInfo">
+            <summary>
+            获取宏观图信息
+            </summary>
+            <returns>返回宏观图信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcMacrograph">
+            <summary>
+            获取标签图和宏观图
+            </summary>
+            <returns>返回标签图和宏观图</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcThumbInfo">
+            <summary>
+            获取缩略图信息
+            </summary>
+            <returns>返回缩略图信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcThumbnail">
+            <summary>
+            获取缩略图
+            </summary>
+            <returns>返回缩略图</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcExtraInfo">
+            <summary>
+            获取额外信息
+            </summary>
+            <returns>返回额外信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetCcmParam">
+            <summary>
+            获取CCM参数
+            </summary>
+            <returns>返回CCM参数</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcLayerInfo">
+            <summary>
+            获取层级信息
+            </summary>
+            <returns>返回层级信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcSliceStream(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取指定图层瓦片流数据（单位：瓦片）
+            </summary>
+            <param name="layer"></param>
+            <param name="x">横向位置第X块瓦片</param>
+            <param name="y">纵向位置第Y块瓦片</param>
+            <returns>成功返回流数据</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcPreview">
+            <summary>
+            获取预览图
+            </summary>
+            <returns>返回预览图</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcDescription">
+            <summary>
+            获取sdpc描述信息
+            </summary>
+            <returns>返回sdpc描述信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdpcTileInfo">
+            <summary>
+            获取带分类血液图像信息
+            </summary>
+            <returns>返回带分类血液图像信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetWhiteBloodImage">
+            <summary>
+            获取带分类血液图像
+            </summary>
+            <returns>返回带分类血液图像列表</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSdplInfo">
+            <summary>
+            获取sdpl关联文件信息
+            </summary>
+            <returns>返回sdpl关联文件信息</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetStreamData(System.Int64,System.Int32)">
+            <summary>
+            获取数据流
+            </summary>
+            <param name="offset">偏移量</param>
+            <param name="count">数据量大小</param>
+            <returns>流数据</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.InitColorTable">
+            <summary>
+            初始化颜色映射表
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.InitTileImage">
+            <summary>
+            获取血液分类信息
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.InitSdpcParam">
+            <summary>
+            初始化sdpc信息
+            </summary>
+            <returns>成功返回true，失败返回false</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.InitBaseImageInfo">
+            <summary>
+            初始化SliceInfo信息
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.OpenImage">
+            <summary>
+            打开图像
+            </summary>
+            <returns>正确返回true，失败返回false</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetSliceArgb(System.Int32,System.Drawing.Point)">
+            <summary>
+            获取指定的切片（单位：瓦片）
+            </summary>
+            <param name="level">获取指定层级</param>
+            <param name="p">指定的位置的瓦片</param>
+            <returns>成功返回四通道原始数据，失败返回null</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetRegionArgb(System.Int32,System.Drawing.Rectangle)">
+            <summary>
+            获取指定区域的切片（单位：像素）
+            </summary>
+            <param name="level">获取指定层级</param>
+            <param name="region">指定区域，x、y为起始像素位置，width、height为获取的图像尺寸</param>
+            <returns>成功返回四通道原始数据，失败返回null</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.GetBestLevelForDownsample(System.Double)">
+            <summary>
+            通过缩放因子获取最优层级
+            </summary>
+            <param name="downsample">缩放因子</param>
+            <returns>最优的层级</returns>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.CloseImage">
+            <summary>
+            关闭图像
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcImage.Dispose">
+            <summary>
+            关闭图像
+            </summary>
+        </member>
+        <member name="T:Slide.Sdpc.SdpcParam">
+            <summary>
+            生强sdpc信息类
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.GetObjectSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.ObjectName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.PersonInfoNum">
+            <summary>
+            暂无用到
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.MacrographNum">
+            <summary>
+            宏观图数量
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.PicHeadSize">
+            <summary>
+            文件头大小
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.PersonInfoSize">
+            <summary>
+            病人信息大小
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.MacroInfoSize">
+            <summary>
+            宏观图信息大小
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.ExtraInfoSize">
+            <summary>
+            额外信息大小
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.ThumbInfoSize">
+            <summary>
+            缩略图信息大小
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.PicInfoSize">
+            <summary>
+            瓦片信息大小
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.TileHeadSize">
+            <summary>
+            外周血头信息大小（只针对外周血有效）
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.PicHeadFlag">
+            <summary>
+            文件头标识位
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.PicInfoFlag">
+            <summary>
+            瓦片标识位
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.ExtraInfoFlag">
+            <summary>
+            额外信息标识位
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.PersonInfoFlag">
+            <summary>
+            病人信息标识位
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.MacrographInfoFlag">
+            <summary>
+            宏观图标识位
+            </summary>
+        </member>
+        <member name="F:Slide.Sdpc.SdpcParam.TileHeadFlag">
+            <summary>
+            外周血标识位（只针对外周血有效）
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.PicHead">
+            <summary>
+            文件头
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.PersonInfo">
+            <summary>
+            病人信息（暂无用到）
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.MacrographInfo">
+            <summary>
+            宏观图结构体数组
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.ThumbInfo">
+            <summary>
+            缩略图信息
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.ExtraInfo">
+            <summary>
+            额外信息
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.LayerPicInfo">
+            <summary>
+            层级信息数组
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.LayerInfo">
+            <summary>
+            层级信息数组（包括单个瓦片大小以及偏移量）
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.LayerSliceSize">
+            <summary>
+            层级瓦片大小
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.LayerSliceOffset">
+            <summary>
+            层级瓦片偏移量
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.TileInfo">
+            <summary>
+            外周血文件头信息（只针对外周血有效）
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.Macrograph">
+            <summary>
+            宏观图图像
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.Thumbnail">
+            <summary>
+            缩略图图像
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.SliceJpeg">
+            <summary>
+            暂没用到
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.WhiteBloodImage">
+            <summary>
+            外周血白细胞图像列表（只针对外周血有效）
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.Preview">
+            <summary>
+            预览图（缩略图+标签）
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.Sdpl">
+            <summary>
+            sdpl关联文件
+            </summary>
+        </member>
+        <member name="P:Slide.Sdpc.SdpcParam.ColorTable">
+            <summary>
+            颜色映射表
+            </summary>
+        </member>
+        <member name="M:Slide.Sdpc.SdpcParam.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Slide.Setting.ParamConfig">
+            <summary>
+            配置文件参数
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.ParamConfigName">
+            <summary>
+            参数配置文件名
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.LanguageSection">
+            <summary>
+            语言节点
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.LanguageKey">
+            <summary>
+            语言键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.ColorSection">
+            <summary>
+            颜色节点
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.GammaKey">
+            <summary>
+            Gamma键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.ContrastKey">
+            <summary>
+            对比度键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.BrightnessKey">
+            <summary>
+            亮度键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.RedKey">
+            <summary>
+            红色通道键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.GreenKey">
+            <summary>
+            绿色通道键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.BlueKey">
+            <summary>
+            蓝色通道键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.ColorCorrectKey">
+            <summary>
+            是否进行颜色校正（0：不校正；1：校正）
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.ModelSection">
+            <summary>
+            相机型号节点
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.ModelKey">
+            <summary>
+            相机型号键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.CammerModelSection">
+            <summary>
+            相机型号节点
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.CcmGammaKey">
+            <summary>
+            相机Gamma键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.RgbRateKey">
+            <summary>
+            相机三通道比例键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.HsvRateKey">
+            <summary>
+            相机HSV比例键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.CcmKey">
+            <summary>
+            相机CCM系数键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.ParamConfig.LutBinName">
+            <summary>
+            艳丽模式映射表文件名
+            </summary>
+        </member>
+        <member name="T:Slide.Setting.SettingConfig">
+            <summary>
+            系统配置参数
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.SettingConfig.SettingConfigPath">
+            <summary>
+            系统设置配置文件
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.SettingConfig.CacheSection">
+            <summary>
+            缓存目录节点
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.SettingConfig.CacheDirKey">
+            <summary>
+            缓存目录键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.SettingConfig.CacheExpirationKey">
+            <summary>
+            缓存过期时间键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.SettingConfig.CacheSpaceKey">
+            <summary>
+            缓存空间键值
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.SettingConfig._cacheExpiration">
+            <summary>
+            缓存过期时间
+            </summary>
+        </member>
+        <member name="F:Slide.Setting.SettingConfig._cacheDir">
+            <summary>
+            缓存目录
+            </summary>
+        </member>
+        <member name="P:Slide.Setting.SettingConfig.CacheDir">
+            <summary>
+            缓存目录
+            </summary>
+        </member>
+        <member name="P:Slide.Setting.SettingConfig.CacheExpiration">
+            <summary>
+            缓存过期时间
+            </summary>
+        </member>
+        <member name="P:Slide.Setting.SettingConfig.CacheSpace">
+            <summary>
+            硬盘缓存至少需要的空间大小
+            </summary>
+        </member>
+        <member name="T:Slide.StorageStream.StorageStream`1">
+            <summary>
+            存储流式读取
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Slide.StorageStream.StorageStream`1.#ctor(Storage.StorageConfig,System.String,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="config">存储配置文件</param>
+            <param name="bucketName">桶</param>
+            <param name="objectName">文件名</param>
+        </member>
+        <member name="P:Slide.StorageStream.StorageStream`1.DoesObjectExist">
+            <summary>
+            文件是否存在
+            </summary>
+        </member>
+        <member name="P:Slide.StorageStream.StorageStream`1.ObjectLength">
+            <summary>
+            文件长度
+            </summary>
+        </member>
+        <member name="P:Slide.StorageStream.StorageStream`1.ObjectName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="M:Slide.StorageStream.StorageStream`1.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:Slide.StorageStream.StorageStream`1.GetStreamData(System.Int64,System.Int32)">
+            <summary>
+            获取指定数据
+            </summary>
+            <param name="offset">偏移量</param>
+            <param name="count">数量</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

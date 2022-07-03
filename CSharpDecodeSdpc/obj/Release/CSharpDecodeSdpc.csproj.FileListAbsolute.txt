@@ -1,0 +1,13 @@
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Release\CSharpDecodeSdpc.exe.config
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Release\CSharpDecodeSdpc.exe
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Release\CSharpDecodeSdpc.pdb
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Release\CSharpDecodeSdpc.exe
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Release\CSharpDecodeSdpc.pdb
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Release\CSharpDecodeSdpc.csprojResolveAssemblyReference.cache
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Release\CSharpDecodeSdpc.exe.config
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Release\CSharpDecodeSdpc.exe
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Release\CSharpDecodeSdpc.pdb
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Release\CSharpDecodeSdpc.csprojAssemblyReference.cache
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Release\CSharpDecodeSdpc.csproj.CopyComplete
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Release\CSharpDecodeSdpc.exe
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Release\CSharpDecodeSdpc.pdb

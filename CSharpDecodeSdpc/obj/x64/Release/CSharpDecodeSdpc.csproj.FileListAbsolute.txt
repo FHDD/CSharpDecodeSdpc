@@ -1,0 +1,15 @@
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\CSharpDecodeSdpc.exe.config
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\CSharpDecodeSdpc.exe
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\CSharpDecodeSdpc.pdb
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\Aliyun.OSS.dll
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\AWSSDK.Core.dll
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\AWSSDK.S3.dll
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\Common.dll
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\Slide.dll
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\Storage.Aliyun.dll
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\Storage.Aws.dll
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\Storage.dll
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\x64\Release\CSharpDecodeSdpc.exe
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\x64\Release\CSharpDecodeSdpc.pdb
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x64\Release\Slide.xml
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\x64\Release\CSharpDecodeSdpc.csprojResolveAssemblyReference.cache

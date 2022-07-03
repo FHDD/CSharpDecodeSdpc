@@ -1,0 +1,5 @@
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x86\Release\CSharpDecodeSdpc.exe.config
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x86\Release\CSharpDecodeSdpc.exe
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\x86\Release\CSharpDecodeSdpc.pdb
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\x86\Release\CSharpDecodeSdpc.exe
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\x86\Release\CSharpDecodeSdpc.pdb

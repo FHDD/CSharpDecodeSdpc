@@ -1,0 +1,17 @@
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\a2.exe.config
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\a2.exe
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\a2.pdb
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\Common.dll
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\Newtonsoft.Json.dll
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\Slide.dll
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\Storage.Aliyun.dll
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\Storage.Aws.dll
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\Storage.dll
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\bin\Release\Slide.xml
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\obj\Release\a2.Form1.resources
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\obj\Release\a2.Properties.Resources.resources
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\obj\Release\a2.csproj.GenerateResource.cache
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\obj\Release\a2.csproj.CopyComplete
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\obj\Release\a2.exe
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\obj\Release\a2.pdb
+E:\研究生\算法组会\gui\autoscreengui\CSharpDecodeSdpc\a2\obj\Release\a2.csprojAssemblyReference.cache

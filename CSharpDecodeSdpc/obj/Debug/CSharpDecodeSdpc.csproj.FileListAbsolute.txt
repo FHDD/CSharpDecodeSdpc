@@ -1,0 +1,9 @@
+C:\Users\sqray\Desktop\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Debug\CSharpDecodeSdpc.exe.config
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Debug\CSharpDecodeSdpc.exe.config
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Debug\CSharpDecodeSdpc.exe
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Debug\CSharpDecodeSdpc.pdb
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\bin\Debug\Slide.xml
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Debug\CSharpDecodeSdpc.csproj.CopyComplete
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Debug\CSharpDecodeSdpc.exe
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Debug\CSharpDecodeSdpc.pdb
+E:\研究生\算法组会\gui\autoscreen\生强解码库\CSharpDecodeSdpc\CSharpDecodeSdpc\obj\Debug\CSharpDecodeSdpc.csprojAssemblyReference.cache
